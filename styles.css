@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+header p {
+    color: #666;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #0073e6;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.job, .certifications, .education, .skills, .soft-skills, .hobbies {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+p, ul li {
+    color: #555;
+    font-size: 1em;
+}
+
+strong {
+    color: #333;
+}
+

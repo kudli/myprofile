@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Password Visibility Toggle</title>
+    <title>Password Protected Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,6 +12,7 @@
             background-color: #000; /* Black background */
             color: #fff; /* White text */
             padding: 20px;
+            text-align: center;
         }
         .container {
             max-width: 400px;
@@ -21,38 +22,53 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle orange glow */
         }
-        input[type="password"], input[type="text"] {
+        input[type="password"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 2px solid #ddd;
             border-radius: 5px;
         }
-        .toggle-password {
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            color: #007BFF; /* Link color */
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        #protected-content {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>Password Visibility Toggle</h2>
+        <h2>Password Protected Page</h2>
         <input type="password" id="password" placeholder="Enter your password">
-        <span class="toggle-password" onclick="togglePassword()">Show</span>
+        <button class="submit-button" onclick="checkPassword()">Submit</button>
+
+        <div id="protected-content">
+            <h3>Welcome to the protected content!</h3>
+            <p>This content is only visible to those who enter the correct password.</p>
+        </div>
     </div>
 
     <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById("password");
-            const toggleText = document.querySelector(".toggle-password");
+        function checkPassword() {
+            const correctPassword = "SuperSecure123!"; // Set your desired password
+            const inputPassword = document.getElementById("password").value;
 
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleText.textContent = "Hide"; // Change text to "Hide"
+            if (inputPassword === correctPassword) {
+                document.getElementById("protected-content").style.display = "block"; // Show protected content
             } else {
-                passwordInput.type = "password";
-                toggleText.textContent = "Show"; // Change text to "Show"
+                alert("Incorrect password! Please try again."); // Alert for incorrect password
             }
         }
     </script>

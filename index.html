@@ -4,114 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vijayeendra - CV</title>
+    <title>Password Visibility Toggle</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #ffecb3; /* Light orange background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle orange glow */
+        }
+        input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        .toggle-password {
+            cursor: pointer;
+            color: #007BFF; /* Link color */
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
-        <header>
-            <h1 class="container-title">Viji</h1>
-            <div class="contact-info">
-                <p><strong>Mobile Phone:</strong> +00 0000000000</p>
-                <p><strong>Email:</strong> vvvvvvvv@gmail.com</p>
-                <p><strong>Address:</strong> Earth</p>
-            </div>
-        </header>
-
-        <section class="experience">
-            <h2 class="toggle-button">Work Experience</h2>
-            <div class="content">
-                <div class="job">
-                    <h3>Self-Employed</h3>
-                    <p><strong>Feb 2017 - Present | Remote</strong></p>
-                    <ul>
-                        <li>HTML CSS Wordpress & Shopify website design</li>
-                        <li>Testing</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="certifications">
-            <h2 class="toggle-button">Professional Certifications</h2>
-            <div class="content">
-                <ul>
-                    <li>Machine Learning with Python</li>
-                    <li>Agile</li>
-                    <li>Scrum</li>
-                    <li>AI</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2 class="toggle-button">Skills</h2>
-            <div class="content">
-                <p><strong>Technical Skills:</strong> HTML, CSS, React, MS Office, Java, Python</p>
-                <p><strong>Languages:</strong> German (A2 level), Proficient in English</p>
-            </div>
-        </section>
-
-        <section class="education">
-            <h2 class="toggle-button">Academic Profile</h2>
-            <div class="content">
-                <ul>
-                    <li>Master's Degree</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="soft-skills">
-            <h2 class="toggle-button">Soft Skills</h2>
-            <div class="content">
-                <ul>
-                    <li>Communication</li>
-                    <li>Motivation</li>
-                    <li>Time Management</li>
-                    <li>Problem Solving</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="hobbies">
-            <h2 class="toggle-button">Hobbies</h2>
-            <div class="content">
-                <ul>
-                    <li>Travelling</li>
-                    <li>Music</li>
-                    <li>Trekking</li>
-                </ul>
-            </div>
-        </section>
+        <h2>Password Visibility Toggle</h2>
+        <input type="password" id="password" placeholder="Enter your password">
+        <span class="toggle-password" onclick="togglePassword()">Show</span>
     </div>
 
     <script>
-        document.querySelectorAll('.toggle-button').forEach(button => {
-            button.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                content.classList.toggle('active');
-            });
-        });
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            const toggleText = document.querySelector(".toggle-password");
 
-        // Generate a random light shade color for the hover effect
-        function getRandomLightColor() {
-            const r = Math.floor(Math.random() * 56) + 200; // Random value for red (200-255)
-            const g = Math.floor(Math.random() * 56) + 200; // Random value for green (200-255)
-            const b = Math.floor(Math.random() * 56) + 200; // Random value for blue (200-255)
-            return `rgb(${r}, ${g}, ${b})`;
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleText.textContent = "Hide"; // Change text to "Hide"
+            } else {
+                passwordInput.type = "password";
+                toggleText.textContent = "Show"; // Change text to "Show"
+            }
         }
-
-        document.querySelectorAll('.toggle-button, .container-title').forEach(button => {
-            button.addEventListener('mouseover', function () {
-                button.style.backgroundColor = getRandomLightColor();
-            });
-
-            button.addEventListener('mouseout', function () {
-                button.style.backgroundColor = '#f39c12'; // Reset to light orange
-            });
-        });
     </script>
 
 </body>

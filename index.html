@@ -17,61 +17,80 @@
         </header>
 
         <section class="experience">
-            <h2>Work Experience</h2>
-
-            <div class="job">
-                <h3>Self-Employed</h3>
-                <p><strong>Feb 2017 - Present | Remote</strong></p>
-                <ul>
-                    <li>HTML CSS Wordpress & Shopify website design</li>
-                    <li>Testing</li>
-                </ul>
+            <h2 class="toggle-button">Work Experience</h2>
+            <div class="content">
+                <div class="job">
+                    <h3>Self-Employed</h3>
+                    <p><strong>Feb 2017 - Present | Remote</strong></p>
+                    <ul>
+                        <li>HTML CSS Wordpress & Shopify website design</li>
+                        <li>Testing</li>
+                    </ul>
+                </div>
             </div>
-
         </section>
 
         <section class="certifications">
-            <h2>Professional Certifications</h2>
-            <ul>
-                <li>Machine Learning with Python</li>
-                <li>Agile</li>
-                <li>Scrum</li>
-                <li>AI</li>
-            </ul>
+            <h2 class="toggle-button">Professional Certifications</h2>
+            <div class="content">
+                <ul>
+                    <li>Machine Learning with Python</li>
+                    <li>Agile</li>
+                    <li>Scrum</li>
+                    <li>AI</li>
+                </ul>
+            </div>
         </section>
 
         <section class="skills">
-            <h2>Skills</h2>
-            <p><strong>Technical Skills:</strong> HTML, CSS, React, MS Office, Java, Python</p>
-            <p><strong>Languages:</strong> German (A2 level), Proficient in English</p>
+            <h2 class="toggle-button">Skills</h2>
+            <div class="content">
+                <p><strong>Technical Skills:</strong> HTML, CSS, React, MS Office, Java, Python</p>
+                <p><strong>Languages:</strong> German (A2 level), Proficient in English</p>
+            </div>
         </section>
 
         <section class="education">
-            <h2>Academic Profile</h2>
-            <ul>
-                <li>Master's Degree</li>
-            </ul>
+            <h2 class="toggle-button">Academic Profile</h2>
+            <div class="content">
+                <ul>
+                    <li>Master's Degree</li>
+                </ul>
+            </div>
         </section>
 
         <section class="soft-skills">
-            <h2>Soft Skills</h2>
-            <ul>
-                <li>Communication</li>
-                <li>Motivation</li>
-                <li>Time Management</li>
-                <li>Problem Solving</li>
-            </ul>
+            <h2 class="toggle-button">Soft Skills</h2>
+            <div class="content">
+                <ul>
+                    <li>Communication</li>
+                    <li>Motivation</li>
+                    <li>Time Management</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
         </section>
 
         <section class="hobbies">
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Travelling</li>
-                <li>Music</li>
-                <li>Trekking</li>
-            </ul>
+            <h2 class="toggle-button">Hobbies</h2>
+            <div class="content">
+                <ul>
+                    <li>Travelling</li>
+                    <li>Music</li>
+                    <li>Trekking</li>
+                </ul>
+            </div>
         </section>
     </div>
+
+    <script>
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -20,7 +20,7 @@ body {
     background: #fff; /* White background for content */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle glow */
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Fixed orange glow */
 }
 
 header {
@@ -33,19 +33,25 @@ header p {
     font-weight: 300;
 }
 
-h1.container-title {
+.container-title {
     background-color: #f39c12; /* Light orange button color */
     color: black; /* Black text */
-    border: 2px solid black;
+    border: 2px solid orange; /* Orange border */
     padding: 15px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 700;
 }
 
-h1.container-title:hover {
-    background-color: lightseagreen; /* Light sea green on hover */
-    border-color: white;
+.container-title:hover {
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Orange glow on hover */
+}
+
+.contact-info {
+    margin-top: 10px;
+    color: black;
+    text-align: left;
 }
 
 h2 {
@@ -62,7 +68,7 @@ h2 {
 }
 
 h2:hover {
-    background-color: #dda0dd; /* Light violet on hover */
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Orange glow */
 }
 
 ul {
@@ -97,7 +103,7 @@ strong {
         padding: 20px;
     }
 
-    h1.container-title {
+    .container-title {
         font-size: 1.8em;
     }
 

@@ -17,7 +17,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: #ffecb3; /* Light orange background for the container */
+    background: #000; /* Container background is black */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle orange glow effect */

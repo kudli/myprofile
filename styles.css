@@ -17,7 +17,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: #111; /* Darker container background */
+    background: #000; /* Container background is black */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle orange glow effect */
@@ -97,30 +97,6 @@ strong {
     color: #fff; /* White text for emphasis */
 }
 
-/* Button Container Styles */
-.button-container {
-    display: flex; /* Enable flexbox for buttons */
-    justify-content: space-between; /* Evenly space buttons */
-    margin-top: 20px; /* Add some margin above the button container */
-}
-
-.action-button {
-    flex: 1; /* Allow buttons to grow equally */
-    padding: 10px;
-    background-color: #007BFF; /* Button background color */
-    color: white; /* White text */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Add transition for hover effects */
-    margin: 0 5px; /* Side margins for spacing */
-}
-
-.action-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly increase button size on hover */
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -145,15 +121,3 @@ strong {
 .content.active {
     display: block;
 }
-
-.cursor-glow {
-    position: absolute;
-    width: 30px; /* Size of the glow */
-    height: 30px; /* Size of the glow */
-    border-radius: 50%; /* Circular shape */
-    pointer-events: none; /* Prevent interaction */
-    transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transition */
-    z-index: 9999; /* Make sure it's above other elements */
-    opacity: 0; /* Start invisible */
-}
-

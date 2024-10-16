@@ -7,23 +7,8 @@
     <title>Vijayeendra - CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Add styles for cursor glow */
-        .cursor-glow {
-            position: absolute;
-            width: 20px; /* Size of the glow */
-            height: 20px; /* Size of the glow */
-            border-radius: 50%; /* Circular shape */
-            pointer-events: none; /* Prevent interaction */
-            transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transition */
-            z-index: 9999; /* Make sure it's above other elements */
-            opacity: 0; /* Start invisible */
-        }
-    </style>
 </head>
 <body>
-
-    <div class="cursor-glow" id="cursorGlow"></div> <!-- Cursor Glow Element -->
 
     <div class="container">
         <header>
@@ -100,11 +85,6 @@
                 </ul>
             </div>
         </section>
-
-        <div class="button-container">
-            <button class="action-button">Action 1</button>
-            <button class="action-button">Action 2</button>
-        </div>
     </div>
 
     <script>
@@ -115,29 +95,22 @@
             });
         });
 
-        // Function to get a random color
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
+        // Generate a random light shade color for the hover effect
+        function getRandomLightColor() {
+            const r = Math.floor(Math.random() * 56) + 200; // Random value for red (200-255)
+            const g = Math.floor(Math.random() * 56) + 200; // Random value for green (200-255)
+            const b = Math.floor(Math.random() * 56) + 200; // Random value for blue (200-255)
+            return `rgb(${r}, ${g}, ${b})`; // Corrected this line
         }
 
-        // Cursor glow effect
-        const cursorGlow = document.getElementById('cursorGlow');
+        document.querySelectorAll('.toggle-button, .container-title').forEach(button => {
+            button.addEventListener('mouseover', function () {
+                button.style.backgroundColor = getRandomLightColor();
+            });
 
-        document.addEventListener('mousemove', (e) => {
-            cursorGlow.style.left = e.clientX + 'px';
-            cursorGlow.style.top = e.clientY + 'px';
-            cursorGlow.style.backgroundColor = getRandomColor(); // Change color
-            cursorGlow.style.opacity = 1; // Make it visible
-        });
-
-        // Hide the glow when the mouse leaves the window
-        document.addEventListener('mouseleave', () => {
-            cursorGlow.style.opacity = 0; // Hide the glow
+            button.addEventListener('mouseout', function () {
+                button.style.backgroundColor = '#f39c12'; // Reset to light orange
+            });
         });
     </script>
 

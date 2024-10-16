@@ -10,17 +10,17 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background-color: #000; /* Black background */
+    background-color: #000; /* Entire page background is black */
     padding: 20px;
 }
 
 .container {
     max-width: 800px;
     margin: auto;
-    background: #fff; /* White background for content */
+    background: #000; /* Container background is black */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Fixed orange glow */
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle glow effect with your preferred color */
 }
 
 header {
@@ -29,14 +29,14 @@ header {
 }
 
 header p {
-    color: #333;
+    color: #fff; /* White text for better contrast on the black background */
     font-weight: 300;
 }
 
 .container-title {
     background-color: #f39c12; /* Light orange button color */
     color: black; /* Black text */
-    border: 2px solid orange; /* Orange border */
+    border: 2px solid rgba(255, 127, 80, 0.7); /* Orange glow as border */
     padding: 15px;
     border-radius: 8px;
     cursor: pointer;
@@ -45,12 +45,12 @@ header p {
 }
 
 .container-title:hover {
-    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Orange glow on hover */
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Glow effect on hover */
 }
 
 .contact-info {
     margin-top: 10px;
-    color: black;
+    color: white; /* White text for contact information */
     text-align: left;
 }
 
@@ -82,19 +82,19 @@ ul {
 }
 
 h3 {
-    color: #333;
+    color: #fff; /* White text for contrast */
     font-size: 1.4em;
     margin-bottom: 5px;
     font-weight: 500;
 }
 
 p, ul li {
-    color: #333;
+    color: #fff; /* White text for contrast */
     font-size: 1em;
 }
 
 strong {
-    color: #333;
+    color: #fff; /* White text for emphasis */
 }
 
 /* Responsive Design */

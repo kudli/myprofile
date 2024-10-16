@@ -23,7 +23,6 @@ body {
     box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle orange glow effect */
 }
 
-
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -96,6 +95,29 @@ p, ul li {
 
 strong {
     color: #fff; /* White text for emphasis */
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex; /* Enable flexbox for buttons */
+    justify-content: space-between; /* Evenly space buttons */
+    margin-top: 20px; /* Add some margin above the button container */
+}
+
+.action-button {
+    flex: 1; /* Allow buttons to grow equally */
+    padding: 10px;
+    background-color: #007BFF; /* Button background color */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px; /* Side margins for spacing */
+}
+
+.action-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Responsive Design */

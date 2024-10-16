@@ -17,7 +17,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: #000; /* Container background is black */
+    background: #111; /* Darker container background */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 127, 80, 0.7); /* Subtle orange glow effect */
@@ -112,12 +112,13 @@ strong {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s; /* Add transition for hover effects */
     margin: 0 5px; /* Side margins for spacing */
 }
 
 .action-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase button size on hover */
 }
 
 /* Responsive Design */
